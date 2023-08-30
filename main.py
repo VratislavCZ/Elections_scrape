@@ -102,7 +102,7 @@ def election(url: str, file: str) -> None:
         
         parties = collect_parties(town_urls)
         
-        print("UKLÁDÁM DATA DO SOUBORU:", file)
+        print("SAVING DATA TO A FILE:", file)
         
         header.extend(parties)
 
@@ -111,7 +111,7 @@ def election(url: str, file: str) -> None:
             f_writer.writerow(header)
             f_writer.writerows(content)
 
-        print("UKONČUJI election scraper")
+        print("TERMINATING election scraper")
     
     except IndexError:
         print("Nastala chyba. Nejspíš máte špatný odkaz nebo jste jej zapomněli dát do uvozovek.")
